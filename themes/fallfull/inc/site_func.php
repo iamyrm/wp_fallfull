@@ -40,3 +40,31 @@ function fallfull_logo()
 	</a>
 <?php
 }
+
+
+/*
+ * Add header icons to menu
+ */
+function add_header_icons_to_menu($items, $args)
+{
+	if ($args->theme_location == 'primary-menu') {
+		$header_icons = '<li><div class="header-icons"><a class="shopping-cart" href="' . home_url('/cart') . '"><i class="fas fa-shopping-cart"></i></a><a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a></div></li>';
+		$items .= $header_icons;
+	}
+	return $items;
+}
+add_filter('wp_nav_menu_items', 'add_header_icons_to_menu', 10, 2);
+
+/*
+ * Add custom class to li items
+ */
+function add_menu_item_classes($classes, $item, $args)
+{
+	if ($args->theme_location == 'primary-menu') {
+		if (in_array('current-menu-item', $classes) || in_array('current-page-ancestor', $classes)) {
+			$classes[] = 'current-list-item';
+		}
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'add_menu_item_classes', 10, 3);

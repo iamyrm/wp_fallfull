@@ -15,7 +15,7 @@ require_once THEME_DIR . '/inc/site_func.php';
 add_action('after_setup_theme', 'fallfull_setup');
 function fallfull_setup()
 {
-	load_theme_textdomain('fallfull', get_template_directory() . '/languages');
+	load_theme_textdomain(THEME_TEXTDOMAIN, get_template_directory() . '/languages');
 	add_theme_support('title-tag');
 	add_theme_support('automatic-feed-links');
 	add_theme_support('post-thumbnails');
@@ -32,7 +32,11 @@ function fallfull_setup()
 	if (!isset($content_width)) {
 		$content_width = 1920;
 	}
-	register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'fallfull')));
+	register_nav_menus(
+		array(
+			'primary-menu' => esc_html__('Main Menu', THEME_TEXTDOMAIN)
+		)
+	);
 }
 
 
