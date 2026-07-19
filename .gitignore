@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!/mu-plugins/
+!/plugins/
+!/themes/
+
+/plugins/akismet
+/plugins/hello.php
+
+/themes/twentytwentytwo
+/themes/twentytwentythree
+/themes/twentytwentyfour
+/themes/twentytwentyfive
+
+/themes/fallfull/static
