@@ -11,11 +11,7 @@
 	<?php wp_body_open(); ?>
 
 	<!--PreLoader-->
-	<div class="loader">
-		<div class="loader-inner">
-			<div class="circle"></div>
-		</div>
-	</div>
+	<?php echo get_template_part('parts/global/preloader'); ?>
 	<!--PreLoader Ends-->
 
 	<!-- header -->
@@ -26,9 +22,7 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
-								<img src="assets/img/logo.png" alt="">
-							</a>
+							<?php fallfull_logo(); ?>
 						</div>
 						<!-- logo -->
 
@@ -68,6 +62,7 @@
 										<li><a href="cart.html">Cart</a></li>
 									</ul>
 								</li>
+
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
@@ -76,6 +71,7 @@
 								</li>
 							</ul>
 						</nav>
+
 						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
@@ -95,7 +91,7 @@
 					<div class="search-bar">
 						<div class="search-bar-tablecell">
 							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
+							<input type="text" placeholder="Type here...">
 							<button type="submit">Search <i class="fas fa-search"></i></button>
 						</div>
 					</div>
