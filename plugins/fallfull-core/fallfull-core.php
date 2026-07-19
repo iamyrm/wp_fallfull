@@ -51,4 +51,4 @@ function fallfull_core_deactivation()
 register_deactivation_hook(__FILE__, 'fallfull_core_deactivation');
 
 // Load required files
-require_once FALLFULL_CORE_DIR . '/inc/cpt/cpt-sliders.php';
+// require_once FALLFULL_CORE_DIR . '/inc/cpt/cpt-sliders.php';
