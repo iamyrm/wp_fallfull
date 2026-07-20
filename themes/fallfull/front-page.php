@@ -1,35 +1,7 @@
 <?php get_header(); ?>
 
 <!-- home page slider -->
-<?php
-$heading = get_field('home_slider_heading');
-$subheading = get_field('home_slider_subheading');
-$btn1_text = get_field('home_slider_btn1_text');
-$btn1_url = get_field('home_slider_btn1_url_slug');
-$btn2_text = get_field('home_slider_btn2_text');
-$btn2_url = get_field('home_slider_btn2_url_slug');
-
-$slider_image = get_field('home_slider_img');
-$image_url = $slider_image ? $slider_image : THEME_URI . '/assets/images/default-slide.jpg';
-?>
-<div class="hero-area hero-bg" style="background-image: url(<?php echo esc_url($image_url); ?>);">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 offset-lg-2 text-center">
-				<div class="hero-text">
-					<div class="hero-text-tablecell">
-						<p class="subtitle"><?php echo esc_html($subheading); ?></p>
-						<h1><?php echo esc_html($heading); ?></h1>
-						<div class="hero-btns">
-							<a href="<?php echo esc_url(home_url('/' . $btn1_url)) ?>" class="boxed-btn"><?php echo esc_html($btn1_text); ?></a>
-							<a href="<?php echo esc_url(home_url('/' . $btn2_url)) ?>" class="bordered-btn"><?php echo esc_html($btn2_text); ?></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<?php echo get_template_part('parts/home/section', 'hero'); ?>
 <!-- end home page slider -->
 
 <!-- features list section -->
