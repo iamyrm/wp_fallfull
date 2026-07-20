@@ -50,6 +50,18 @@ function fallfull_core_deactivation()
 }
 register_deactivation_hook(__FILE__, 'fallfull_core_deactivation');
 
+/*
+ * Enqueuing custom imports
+ */
+function fallfull_core_plugin_enqueue_styles()
+{
+	// Custom Styles
+	wp_enqueue_style('fallfull-core-styles', FALLFULL_CORE_URI . '/assets/css/style.css', array(), FALLFULL_CORE_VERSION, 'all');
+}
+
+add_action('wp_enqueue_scripts', 'fallfull_core_plugin_enqueue_styles');
+
 // Load required files
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-hero.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-features.php';
+require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-product-desc.php';

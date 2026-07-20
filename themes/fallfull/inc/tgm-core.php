@@ -11,7 +11,7 @@ function fallfull_register_required_plugins()
 		//    'source'             => THEME_DIR . '/plugins/fallfull-core.zip',
 		//    'required'           => true,
 		//    'version'            => THEME_VERSION,
-		//    'force_activation'   => false,
+		//    'force_activation'   => true,
 		//    'force_deactivation' => false,
 		// ),
 
