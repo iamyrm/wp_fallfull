@@ -4,6 +4,8 @@
 !/plugins/
 !/themes/
 
+!.readme.md
+
 /plugins/akismet
 /plugins/hello.php
 
