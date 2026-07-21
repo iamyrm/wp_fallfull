@@ -6,6 +6,10 @@ A WordPress WooCommerce theme and plugin ecosystem for fruits and vegetables e-c
 
 **FallFull** was developed as a complete WordPress solution for e-commerce websites specializing in fruits and vegetables. It included a **Custom Theme**, a **Core Plugin**, **WooCommerce integration**, **pre-coded ACF fields**, and support for popular WordPress plugins.
 
+## Setup Process
+
+Install **FallFull** Theme, popup on admin dashboard with plugin installation notice will appear, install all the suggested plugins and you are good to go.
+
 ## Theme Details
 
 - **Theme Name:** FallFull
