@@ -21,3 +21,7 @@ fallfull is distributed under the terms of the GNU GPL
 .fallfull-title {
 	color: #F28123;
 }
+
+.fallfull-color-white {
+	color: white !important;
+}
