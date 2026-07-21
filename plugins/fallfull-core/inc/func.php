@@ -5,7 +5,7 @@
  */
 function fallfull_style_acf_group_title()
 {
-	echo '<style>
+    echo '<style>
         /* Fixed syntax error and strengthened selectors */
         #wpbody .postbox-header h2,
         #wpbody .postbox[id^="acf-"] .postbox-header h2,
