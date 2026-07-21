@@ -68,3 +68,63 @@ function add_menu_item_classes($classes, $item, $args)
 	return $classes;
 }
 add_filter('nav_menu_css_class', 'add_menu_item_classes', 10, 3);
+
+
+/*
+ * Highlight Words 
+ */
+
+function fallfull_highlight_words($content, $words, $class = 'orange-text')
+{
+	if (empty($content) || empty($words)) {
+		return $content;
+	}
+
+	// Convert to array if single word
+	if (!is_array($words)) {
+		$words = array($words);
+	}
+
+	// Sort by length descending to avoid partial matches
+	usort($words, function ($a, $b) {
+		return strlen($b) - strlen($a);
+	});
+
+	foreach ($words as $word) {
+		$word = trim($word);
+		if (empty($word)) {
+			continue;
+		}
+		// Escape special regex characters
+		$escaped_word = preg_quote($word, '/');
+		// Replace word with highlighted version (case-insensitive)
+		$content = preg_replace(
+			'/' . $escaped_word . '/i',
+			'<span class="' . esc_attr($class) . '">$0</span>',
+			$content
+		);
+	}
+
+	return $content;
+}
+
+
+/**
+ * Display youtube video thumbnail
+ */
+function get_youtube_thumbnail($url, $quality = 'maxresdefault')
+{
+	if (empty($url)) {
+		return '';
+	}
+
+	// Extract video ID from various YouTube URL formats
+	$pattern = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/i';
+
+	if (preg_match($pattern, $url, $matches)) {
+		$video_id = $matches[1];
+		return 'https://img.youtube.com/vi/' . $video_id . '/' . $quality . '.jpg';
+	}
+
+	return '';
+}

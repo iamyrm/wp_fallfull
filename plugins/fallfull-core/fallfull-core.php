@@ -70,3 +70,4 @@ require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-hero.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-features.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-product-desc.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/global/section-testimonials.php';
+require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-ad.php';
