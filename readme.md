@@ -1,6 +1,6 @@
 # FallFull WordPress Project
 
-A WordPress WooCommerce theme and plugin ecosystem for fruits and vegetables e-commerce.
+Custom WordPress eCommerce theme and plugin ecosystem for fruits and vegetables store.
 
 ## Project Overview
 
