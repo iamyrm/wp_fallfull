@@ -31,6 +31,12 @@ function fallfull_register_required_plugins()
 			'name'      => 'WooCommerce',
 			'slug'      => 'woocommerce',
 			'required'  => true,
+		),
+
+		array(
+			'name'      => 'Redux Framework',
+			'slug'      => 'redux-framework',
+			'required'  => true,
 		)
 	);
 
