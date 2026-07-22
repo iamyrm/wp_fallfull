@@ -1,4 +1,8 @@
 <?php
+global $fallfull_options;
+$word = isset($fallfull_options['home-news-text-color']) ? $fallfull_options['home-news-text-color'] : '';
+$highlight_words = $word ? array_map('trim', explode(',', $word)) : array();
+
 $news_heading = get_field('news_heading', get_the_ID());
 $news_desc = get_field('news_description', get_the_ID());
 $news_btn_txt = get_field('news_btn_txt', get_the_ID());
@@ -11,7 +15,7 @@ $news_btn_slug = get_field('news_btn_slug', get_the_ID());
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2 text-center">
 				<div class="section-title">
-					<h3><?php echo fallfull_highlight_words(wp_kses_post($news_heading), array('Our')); ?></h3>
+					<h3><?php echo fallfull_highlight_words(wp_kses_post($news_heading), $highlight_words); ?></h3>
 					<p><?php echo esc_html($news_desc); ?></p>
 				</div>
 			</div>
