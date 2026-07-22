@@ -1,4 +1,7 @@
 <?php
+global $fallfull_options;
+$word = isset($fallfull_options['home-ads-text-color']) ? $fallfull_options['home-ads-text-color'] : '';
+$highlight_words = $word ? array_map('trim', explode(',', $word)) : array();
 
 $ad_video_url = get_field('ad_video_url');
 $ad_subheading = get_field('ad_subheading');
@@ -24,7 +27,7 @@ $ad_btn_slug = get_field('ad_btn_slug');
 					<?php endif; ?>
 
 					<?php if ($ad_heading) : ?>
-						<h2><?php echo fallfull_highlight_words(wp_kses_post($ad_heading), array('Fruitkha')); ?></h2>
+						<h2><?php echo fallfull_highlight_words(wp_kses_post($ad_heading), $highlight_words); ?></h2>
 					<?php endif; ?>
 
 					<?php if ($ad_description) : ?>

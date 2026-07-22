@@ -1,6 +1,6 @@
 <?php
 global $fallfull_options;
-$word = $fallfull_options['home-prod-desc-text-color'];
+$word = isset($fallfull_options['home-prod-desc-text-color']) ? $fallfull_options['home-prod-desc-text-color'] : '';
 $highlight_words = $word ? array_map('trim', explode(',', $word)) : array();
 
 $heading = get_field('product_heading', get_the_ID());
