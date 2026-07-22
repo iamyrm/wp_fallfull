@@ -34,3 +34,9 @@ Install and activate **FallFull** Theme, popup on admin dashboard with plugin in
 ### Redux Framework
 
 - **Redux Framework** was used to implement custom dashboard settings for **non-standard content types**, including footer section content, custom-colored text, and other custom site elements that were not managed as **posts** or **pages.**
+
+### mu-plugins (Optional)
+
+- **mu-plugins** was used to disable some default behaviour of WordPress for security purposes. It is totally optional to use.
+
+	- **Setup Process :** Create (or copy) a **mu-plugins** folder inside the **wp-content** directory. Then, create a `php` file (or copy from the repo) into the **mu-plugins** folder. WordPress automatically loads all **PHP** files placed in this directory, no activation, imports, or additional configuration required.
