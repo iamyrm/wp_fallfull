@@ -26,16 +26,16 @@
 <!-- end deals section -->
 
 <!-- testimonail-section -->
-<?php echo get_template_part('parts/home/section', 'testimonial'); ?>
+<?php echo get_template_part('parts/global/section', 'testimonial'); ?>
 <!-- end testimonail-section -->
 
 <!-- advertisement section -->
 <?php echo get_template_part('parts/home/section', 'ad'); ?>
 <!-- end advertisement section -->
 
-<!-- shop banner -->
-<?php echo get_template_part('parts/home/section', 'shop-banner'); ?>
-<!-- end shop banner -->
+<!-- shop sale -->
+<?php echo get_template_part('parts/global/section', 'shop-sale'); ?>
+<!-- end shop sale -->
 
 <!-- latest news -->
 <?php echo get_template_part('parts/home/section', 'news'); ?>

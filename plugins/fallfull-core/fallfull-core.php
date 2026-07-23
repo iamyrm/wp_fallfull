@@ -72,7 +72,7 @@ require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-features.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-product-desc.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/global/section-testimonials.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-ad.php';
-require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-shop-banner.php';
+require_once FALLFULL_CORE_DIR . '/inc/acf/global/section-shop-sale.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-news.php';
 
 // Redux Framework

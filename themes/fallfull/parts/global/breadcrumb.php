@@ -13,6 +13,10 @@ if (is_404()) { // 404 Page
 	$title = get_the_title() ? get_the_title() : '404 - Not Found';
 	$subtitle =	get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
 	$display_subtitle = $subtitle ? $subtitle : 'Fresh and Organic';
+} elseif (is_page('about')) { // About Page
+	$title = get_the_title() ? get_the_title() : 'About Us';
+	$subtitle =	get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
+	$display_subtitle = $subtitle ? $subtitle : 'We sale fresh fruits';
 }
 
 ?>
