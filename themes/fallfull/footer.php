@@ -68,7 +68,7 @@ $footer_copyright_text = isset($fallfull_options['footer_copyright_text']) ? $fa
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12">
-				<p>Copyrights &copy; <?php echo date('Y') ?> - <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(bloginfo('name')); ?></a>, <?php echo esc_html($footer_copyright_text); ?></p>
+				<p>Copyrights &copy; <?php echo date('Y') ?> - <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(bloginfo('name')); ?></a>, <?php echo esc_html($footer_copyright_text); ?> | Yyagya</p>
 			</div>
 			<div class="col-lg-6 text-right col-md-12">
 				<div class="social-icons">

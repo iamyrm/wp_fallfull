@@ -1,11 +1,30 @@
 <?php get_header(); ?>
-<article id="post-0" class="post not-found" role="alert">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'fallfull' ); ?></h1>
-</header>
-<div class="entry-content" itemprop="mainContentOfPage">
-<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'fallfull' ); ?></p>
-<?php get_search_form(); ?>
+
+<!-- breadcrumb-section -->
+<?php get_template_part('parts/global/breadcrumb'); ?>
+<!-- end breadcrumb section -->
+
+<!-- error section -->
+<div class="full-height-section error-section">
+	<div class="full-height-tablecell">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="error-text">
+						<i class="far fa-sad-cry"></i>
+						<h1>Oops! Not Found.</h1>
+						<p>The page you requested for is not found.</p>
+						<a href="<?php echo esc_url(home_url('/')); ?>" class="boxed-btn">Back to Home</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-</article>
+<!-- end error section -->
+
+<!-- logo carousel -->
+<?php echo get_template_part('parts/global/section', 'carousel'); ?>
+<!-- end logo carousel -->
+
 <?php get_footer(); ?>

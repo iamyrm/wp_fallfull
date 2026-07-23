@@ -42,7 +42,7 @@
 <!-- end latest news -->
 
 <!-- logo carousel -->
-<?php echo get_template_part('parts/home/section', 'carousel'); ?>
+<?php echo get_template_part('parts/global/section', 'carousel'); ?>
 <!-- end logo carousel -->
 
 <?php get_footer(); ?>
