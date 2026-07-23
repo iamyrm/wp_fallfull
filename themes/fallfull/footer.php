@@ -7,6 +7,7 @@ $col_heading2 = isset($fallfull_options['footer_column_2']) ? $fallfull_options[
 $col_heading3 = isset($fallfull_options['footer_column_3']) ? $fallfull_options['footer_column_3'] : '';
 $col_heading4 = isset($fallfull_options['footer_column_4']) ? $fallfull_options['footer_column_4'] : '';
 $col1_content = isset($fallfull_options['footer_column_1_content']) ? $fallfull_options['footer_column_1_content'] : '';
+$footer_copyright_text = isset($fallfull_options['footer_copyright_text']) ? $fallfull_options['footer_copyright_text'] : '';
 
 ?>
 <div class="footer-area">
@@ -31,13 +32,15 @@ $col1_content = isset($fallfull_options['footer_column_1_content']) ? $fallfull_
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-box pages">
 					<h2 class="widget-title"><?php echo esc_html($col_heading3); ?></h2>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="services.html">Shop</a></li>
-						<li><a href="news.html">News</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
+					<?php
+					wp_nav_menu(array(
+						'theme_location' => 'footer-menu',
+						'menu_class'     => '',
+						'container'      => false,
+						'depth'          => 1,
+						'fallback_cb'    => false,
+					));
+					?>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
@@ -60,7 +63,7 @@ $col1_content = isset($fallfull_options['footer_column_1_content']) ? $fallfull_
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12">
-				<p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>, All Rights Reserved.</p>
+				<p>Copyrights &copy; <?php echo date('Y') ?> - <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html(bloginfo('name')); ?></a>, <?php echo esc_html($footer_copyright_text); ?></p>
 			</div>
 			<div class="col-lg-6 text-right col-md-12">
 				<div class="social-icons">

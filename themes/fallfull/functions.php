@@ -38,7 +38,8 @@ function fallfull_setup()
 	}
 	register_nav_menus(
 		array(
-			'primary-menu' => esc_html__('Main Menu', THEME_TEXTDOMAIN)
+			'primary-menu' => esc_html__('Main Menu', THEME_TEXTDOMAIN),
+			'footer-menu' => esc_html__('Footer Menu', THEME_TEXTDOMAIN),
 		)
 	);
 }

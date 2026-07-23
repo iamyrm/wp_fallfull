@@ -40,6 +40,15 @@ for ($i = 1; $i <= $count; $i++) {
 	);
 }
 
+$footer_copytight[] = array(
+	'id'       => 'footer_copyright_text',
+	'type'     => 'text',
+	'title'    => esc_html__('Footer Copyright Text', FALLFULL_CORE_TEXTDOMAIN),
+	'subtitle' => esc_html__('Enter footer copyright text', FALLFULL_CORE_TEXTDOMAIN),
+	'desc'     => esc_html__('Enter footer copyright text', FALLFULL_CORE_TEXTDOMAIN),
+	'default'  => '',
+);
+
 Redux::set_section(
 	$opt_name,
 	array(
@@ -48,7 +57,7 @@ Redux::set_section(
 		'id'               => 'settings_site_footer',
 		'subsection'       => true,
 		'customizer_width' => '700px',
-		'fields'           => array_merge($footer_col_heading, $other_fields),
+		'fields'           => array_merge($footer_col_heading, $other_fields, $footer_copytight),
 	)
 );
 // phpcs:enable
