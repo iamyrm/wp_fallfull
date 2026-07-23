@@ -260,6 +260,7 @@ Redux::set_args($opt_name, $args);
 
 require_once FALLFULL_CORE_DIR . '/inc/redux/fields/redux-fallfull-settings.php'; // Main menu for Fallfull Site Setting where other submenu will appear
 
+require_once FALLFULL_CORE_DIR . '/inc/redux/fields/site/site-content.php'; // Submenu for Fallfull Site Setting
 require_once FALLFULL_CORE_DIR . '/inc/redux/fields/site/site-customization.php'; // Submenu for Fallfull Site Setting
 require_once FALLFULL_CORE_DIR . '/inc/redux/fields/footer/footer-contents.php'; // Submenu for Fallfull Site Setting
 
