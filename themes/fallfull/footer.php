@@ -1,16 +1,26 @@
 <!-- footer -->
+<?php
+global $fallfull_options;
+
+$col_heading1 = isset($fallfull_options['footer_column_1']) ? $fallfull_options['footer_column_1'] : '';
+$col_heading2 = isset($fallfull_options['footer_column_2']) ? $fallfull_options['footer_column_2'] : '';
+$col_heading3 = isset($fallfull_options['footer_column_3']) ? $fallfull_options['footer_column_3'] : '';
+$col_heading4 = isset($fallfull_options['footer_column_4']) ? $fallfull_options['footer_column_4'] : '';
+$col1_content = isset($fallfull_options['footer_column_1_content']) ? $fallfull_options['footer_column_1_content'] : '';
+
+?>
 <div class="footer-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-box about-widget">
-					<h2 class="widget-title">About us</h2>
-					<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+					<h2 class="widget-title"><?php echo esc_html($col_heading1); ?></h2>
+					<p><?php echo esc_html($col1_content); ?></p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-box get-in-touch">
-					<h2 class="widget-title">Get in Touch</h2>
+					<h2 class="widget-title"><?php echo esc_html($col_heading2); ?></h2>
 					<ul>
 						<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
 						<li>support@fruitkha.com</li>
@@ -20,7 +30,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-box pages">
-					<h2 class="widget-title">Pages</h2>
+					<h2 class="widget-title"><?php echo esc_html($col_heading3); ?></h2>
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
@@ -32,7 +42,7 @@
 			</div>
 			<div class="col-lg-3 col-md-6">
 				<div class="footer-box subscribe">
-					<h2 class="widget-title">Subscribe</h2>
+					<h2 class="widget-title"><?php echo esc_html($col_heading4); ?></h2>
 					<p>Subscribe to our mailing list to get the latest updates.</p>
 					<form action="index.html">
 						<input type="email" placeholder="Email">
