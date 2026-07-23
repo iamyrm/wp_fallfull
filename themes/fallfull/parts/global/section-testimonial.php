@@ -5,7 +5,6 @@
 				<div class="testimonial-sliders">
 
 					<?php
-					$testimonials_subheading = get_field('testimonials_subheading', get_the_ID());
 
 					$testimonials = new WP_Query(array(
 						'post_type' => 'testimonials',
@@ -17,6 +16,8 @@
 					if ($testimonials->have_posts()):
 						while ($testimonials->have_posts()):
 							$testimonials->the_post();
+
+							$testimonials_subheading = get_field('testimonials_subheading');
 
 							$feature_img = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'));
 							$img = $feature_img ? $feature_img : THEME_URI . '/assets/images/avatar.jpg';
