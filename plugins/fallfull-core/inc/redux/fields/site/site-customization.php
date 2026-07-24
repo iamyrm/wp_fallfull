@@ -59,6 +59,14 @@ Redux::set_section(
 				'desc'     => esc_html__('Enter the word/s seperated by comma to change its color in the frontend of the product description heading. Do not add space after comma', FALLFULL_CORE_TEXTDOMAIN),
 				'default'  => '',
 			),
+			array(
+				'id'       => 'about-team-sec-text-color',
+				'type'     => 'text',
+				'title'    => esc_html__('About Page Teams Section Heading Text', FALLFULL_CORE_TEXTDOMAIN),
+				'subtitle' => esc_html__('Enter one or more word', FALLFULL_CORE_TEXTDOMAIN),
+				'desc'     => esc_html__('Enter the word/s seperated by comma to change its color in the frontend of the product description heading. Do not add space after comma', FALLFULL_CORE_TEXTDOMAIN),
+				'default'  => '',
+			),
 		),
 	)
 );

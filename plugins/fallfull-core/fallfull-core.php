@@ -75,6 +75,7 @@ require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-ad.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/global/section-shop-sale.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/home/section-news.php';
 require_once FALLFULL_CORE_DIR . '/inc/acf/about/section-feature.php';
+require_once FALLFULL_CORE_DIR . '/inc/acf/about/section-teams.php';
 
 // Redux Framework
 require_once FALLFULL_CORE_DIR . '/inc/redux/redux-options.php';
