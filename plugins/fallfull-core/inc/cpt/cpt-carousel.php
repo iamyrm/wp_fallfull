@@ -56,7 +56,7 @@ function fallfull_carousel()
 		'show_in_admin_bar'     => true,
 		'show_in_rest'          => true,
 		'menu_position'         => null,
-		'menu_icon'             => 'dashicons-slides',
+		'menu_icon'             => 'dashicons-images-alt2',
 		'capability_type'       => 'post',
 		'capabilities'          => array(),
 		'supports'              => array('title', 'thumbnail'),

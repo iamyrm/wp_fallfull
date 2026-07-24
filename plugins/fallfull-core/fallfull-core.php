@@ -64,6 +64,7 @@ add_action('wp_enqueue_scripts', 'fallfull_core_plugin_enqueue_styles');
 // CPT
 require_once FALLFULL_CORE_DIR . '/inc/cpt/cpt-testimonial.php';
 require_once FALLFULL_CORE_DIR . '/inc/cpt/cpt-carousel.php';
+require_once FALLFULL_CORE_DIR . '/inc/cpt/cpt-team.php';
 
 // ACF Fields
 require_once FALLFULL_CORE_DIR . '/inc/func.php';
