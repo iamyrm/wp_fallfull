@@ -10,7 +10,10 @@
 			<input type="text" placeholder="Subject" name="subject" id="subject">
 		</p>
 		<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
-		<input type="hidden" name="token" value="FsWga4&@f6aw" />
 		<p><input type="submit" value="Submit"></p>
 	</form>
 </div>
+
+
+<?php // echo do_shortcode('[[contact-form-7 id="e3cf714" title="Contact Page Form"]'); 
+?>

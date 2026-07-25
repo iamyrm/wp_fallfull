@@ -30,6 +30,14 @@ $other_fields = array(
 		'default'  => '',
 	),
 	array(
+		'id'       => 'fallfull_form_email',
+		'type'     => 'text',
+		'title'    => esc_html__('Email Addresses For Contact form', FALLFULL_CORE_TEXTDOMAIN),
+		'subtitle' => esc_html__('Enter email addresses where you want to recieve the contact form emails.', FALLFULL_CORE_TEXTDOMAIN),
+		'desc'     => esc_html__('Enter email addresses where you want to recieve the contact form emails. If multiple emails, seperate using comma, no space after comma', FALLFULL_CORE_TEXTDOMAIN),
+		'default'  => '',
+	),
+	array(
 		'id'       => 'fallfull_site_phoneno',
 		'type'     => 'text',
 		'title'    => esc_html__('Email Phone Number', FALLFULL_CORE_TEXTDOMAIN),

@@ -15,7 +15,6 @@ require_once THEME_DIR . '/inc/site_func.php';
 require_once THEME_DIR . '/lib/tgm/class-tgm-plugin-activation.php';
 require_once THEME_DIR . '/inc/tgm-core.php';
 
-
 add_action('after_setup_theme', 'fallfull_setup');
 function fallfull_setup()
 {
@@ -107,12 +106,6 @@ function fallfull_enqueue()
 
 	// Main JS
 	wp_enqueue_script('theme-main-js', THEME_URI . '/assets/js/main.js', array('jquery-custom', 'bootstrap', 'owl-carousel', 'magnific-popup', 'meanmenu'), THEME_VERSION, true);
-
-
-	//Form Fvalidator for contact page
-	if (is_page('contact')) {
-		wp_enqueue_script('form-validator', THEME_URI . '/assets/js/form-validate.js', array('jquery-custom'), THEME_VERSION, true);
-	}
 
 	// Comment reply script
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

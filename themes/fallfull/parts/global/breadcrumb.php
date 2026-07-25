@@ -21,6 +21,15 @@ if (is_404()) { // 404 Page
 	$title = get_the_title() ? get_the_title() : 'Contact Us';
 	$subtitle =	get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
 	$display_subtitle = $subtitle ? $subtitle : 'Get 24/7 Support';
+} elseif (is_home()) {
+	$blog_page_id = get_option('page_for_posts');
+	$title = get_the_title($blog_page_id) ? get_the_title($blog_page_id) : 'Blog';
+	$subtitle = get_post_meta($blog_page_id, 'wp_page_subtitle', true);
+	$display_subtitle = $subtitle ? $subtitle : 'Our Latest News';
+
+	if (has_post_thumbnail($blog_page_id)) {
+		$background_url = get_the_post_thumbnail_url($blog_page_id, 'full');
+	}
 }
 
 ?>
