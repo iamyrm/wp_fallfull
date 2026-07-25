@@ -58,7 +58,7 @@ $desc = get_field('about_pg_teams_desc', get_the_ID());
 					$background_image = $featured_image_url ? $featured_image_url : THEME_URI . '/assets/images/avatar.jpg';
 
 					// Get taxonomy terms (team_type)
-					$terms = get_the_terms(get_the_ID(), 'team_type');
+					$terms = get_the_terms(get_the_ID(), 'team-type');
 					$taxonomy_display = '';
 
 					if ($terms && !is_wp_error($terms)) {

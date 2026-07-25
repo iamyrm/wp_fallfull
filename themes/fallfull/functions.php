@@ -108,6 +108,12 @@ function fallfull_enqueue()
 	// Main JS
 	wp_enqueue_script('theme-main-js', THEME_URI . '/assets/js/main.js', array('jquery-custom', 'bootstrap', 'owl-carousel', 'magnific-popup', 'meanmenu'), THEME_VERSION, true);
 
+
+	//Form Fvalidator for contact page
+	if (is_page('contact')) {
+		wp_enqueue_script('form-validator', THEME_URI . '/assets/js/form-validate.js', array('jquery-custom'), THEME_VERSION, true);
+	}
+
 	// Comment reply script
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

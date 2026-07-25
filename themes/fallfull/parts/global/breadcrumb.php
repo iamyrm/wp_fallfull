@@ -1,7 +1,7 @@
 <?php
 
-$title = "";
-$display_subtitle = "";
+$title = get_the_title();
+$display_subtitle = get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
 
 if (has_post_thumbnail()) {
 	$background_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -17,6 +17,10 @@ if (is_404()) { // 404 Page
 	$title = get_the_title() ? get_the_title() : 'About Us';
 	$subtitle =	get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
 	$display_subtitle = $subtitle ? $subtitle : 'We sale fresh fruits';
+} elseif (is_page('contact')) { // Contact Page
+	$title = get_the_title() ? get_the_title() : 'Contact Us';
+	$subtitle =	get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
+	$display_subtitle = $subtitle ? $subtitle : 'Get 24/7 Support';
 }
 
 ?>
