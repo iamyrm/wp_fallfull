@@ -39,6 +39,14 @@ Install and activate **FallFull** Theme, popup on admin dashboard with plugin in
 
 - **Contact Form 7** was used for contact forms.
 
+### WP Mail SMTP
+
+- **WP Mail SMTP 7** was used for smtp for email services.
+
+### Advanced Google reCAPTCHA
+
+- **Advanced Google reCAPTCHA** was used for google reCaptcha v3
+
 ### mu-plugins (Optional)
 
 - **mu-plugins** was used to disable some default behaviour of WordPress for security purposes. It is totally optional to use.

@@ -37,6 +37,18 @@ function fallfull_register_required_plugins()
 			'name'      => 'Redux Framework',
 			'slug'      => 'redux-framework',
 			'required'  => true,
+		),
+
+		array(
+			'name'      => 'WP Mail SMTP',
+			'slug'      => 'wp-mail-smtp',
+			'required'  => true,
+		),
+
+		array(
+			'name'      => 'Advanced Google reCAPTCHA',
+			'slug'      => 'advanced-google-recaptcha',
+			'required'  => true,
 		)
 	);
 
