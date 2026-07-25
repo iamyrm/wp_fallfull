@@ -63,3 +63,25 @@ fallfull is distributed under the terms of the GNU GPL
 	padding: 15px;
 	border-radius: 5px;
 }
+
+.wpcf7-form br {
+	display: none;
+}
+
+.wpcf7-form-control-wrap input[type="text"],
+.wpcf7-form-control-wrap input[type="email"],
+.wpcf7-form-control-wrap input[type="tel"] {
+	/* width: 49%; */
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.wpcf7-textarea {
+	border: 1px solid #ddd;
+	padding: 15px;
+	height: 200px;
+	border-radius: 3px;
+	width: 100%;
+	resize: none;
+}
