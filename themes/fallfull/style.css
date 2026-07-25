@@ -24,3 +24,31 @@ fallfull is distributed under the terms of the GNU GPL
 .fallfull-color-white {
 	color: white !important;
 }
+
+#commentform input[type="text"],
+#commentform input[type="email"] {
+	width: 49%;
+	font-size: 15px;
+	color: rgb(5, 25, 34);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(221, 221, 221);
+	border-image: none;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.comment-form-cookies-consent {
+	margin-top: 12px;
+}
+
+#commentform textarea {
+	border: 1px solid #ddd;
+	padding: 15px;
+	font-size: 15px;
+	color: #051922;
+	border-radius: 5px;
+	height: 250px;
+	resize: none;
+	width: 100%;
+}

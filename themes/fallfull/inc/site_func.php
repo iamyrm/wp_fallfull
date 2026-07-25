@@ -183,3 +183,46 @@ function custom_numeric_pagination()
 
 	echo '</ul></div>' . "\n";
 }
+
+
+
+// ----------------------- -------
+
+/**
+ * Custom comment callback function
+ * Maintains the exact HTML structure from the original static comments
+ */
+function custom_comment_callback($comment, $args, $depth)
+{
+	$tag = ('div' === $args['style']) ? 'div' : 'li';
+	$child_class = ($comment->comment_parent > 0) ? ' child' : '';
+?>
+	<<?php echo $tag; ?> <?php comment_class('single-comment-body' . $child_class); ?> id="comment-<?php comment_ID(); ?>">
+		<div class="comment-user-avater">
+			<?php
+			if ($args['avatar_size'] != 0) {
+				echo get_avatar($comment, $args['avatar_size']);
+			}
+			?>
+		</div>
+		<div class="comment-text-body">
+			<h4>
+				<?php echo get_comment_author_link($comment); ?>
+				<span class="comment-date"><?php echo get_comment_date('F j, Y', $comment); ?></span>
+				<?php
+				comment_reply_link(array_merge($args, array(
+					'add_below' => 'comment',
+					'depth'     => $depth,
+					'max_depth' => $args['max_depth'],
+					'before'    => ' ',
+					'after'     => '',
+				)));
+				?>
+			</h4>
+			<p><?php comment_text(); ?></p>
+			<?php if ('0' == $comment->comment_approved) : ?>
+				<p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'textdomain'); ?></p>
+			<?php endif; ?>
+		</div>
+	<?php
+}
