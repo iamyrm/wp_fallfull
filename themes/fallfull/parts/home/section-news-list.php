@@ -1,48 +1,43 @@
-<div class="col-lg-4 col-md-6">
-	<div class="single-latest-news">
-		<a href="single-news.html">
-			<div class="latest-news-bg news-bg-1"></div>
-		</a>
-		<div class="news-text-box">
-			<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-			<p class="blog-meta">
-				<span class="author"><i class="fas fa-user"></i> Admin</span>
-				<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-			</p>
-			<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-			<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+<?php
+// Custom Query - Display 3 posts
+$custom_query = new WP_Query(array(
+	'post_type'      => 'post',
+	'post_status'    => 'publish',
+	'posts_per_page' => 3,
+));
+
+if ($custom_query->have_posts()) : while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+
+		<?php
+		// Fallback Logic for Featured Images
+		if (has_post_thumbnail()) {
+			$post_image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+		} else {
+			$post_image_url = THEME_URI . '/assets/images/default-slide.jpg';
+		}
+		?>
+
+		<div class="col-lg-4 col-md-6">
+			<div class="single-latest-news">
+				<a href="<?php the_permalink(); ?>">
+					<div class="latest-news-bg" style="background-image: url(<?php echo esc_url($post_image_url); ?>);"></div>
+				</a>
+				<div class="news-text-box">
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<p class="blog-meta">
+						<span class="author"><i class="fas fa-user"></i> <?php the_author(); ?></span>
+						<span class="date"><i class="fas fa-calendar"></i> <?php echo get_the_date('j F, Y'); ?></span>
+					</p>
+					<p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+					<a href="<?php the_permalink(); ?>" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+				</div>
+			</div>
 		</div>
+
+	<?php endwhile;
+	wp_reset_postdata();
+else : ?>
+	<div class="col-md-12">
+		<p><?php esc_html_e('No posts found.', THEME_TEXTDOMAIN); ?></p>
 	</div>
-</div>
-<div class="col-lg-4 col-md-6">
-	<div class="single-latest-news">
-		<a href="single-news.html">
-			<div class="latest-news-bg news-bg-2"></div>
-		</a>
-		<div class="news-text-box">
-			<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-			<p class="blog-meta">
-				<span class="author"><i class="fas fa-user"></i> Admin</span>
-				<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-			</p>
-			<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-			<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-		</div>
-	</div>
-</div>
-<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-	<div class="single-latest-news">
-		<a href="single-news.html">
-			<div class="latest-news-bg news-bg-3"></div>
-		</a>
-		<div class="news-text-box">
-			<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-			<p class="blog-meta">
-				<span class="author"><i class="fas fa-user"></i> Admin</span>
-				<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-			</p>
-			<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-			<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-		</div>
-	</div>
-</div>
+<?php endif; ?>

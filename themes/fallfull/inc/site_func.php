@@ -221,7 +221,7 @@ function custom_comment_callback($comment, $args, $depth)
 			</h4>
 			<p><?php comment_text(); ?></p>
 			<?php if ('0' == $comment->comment_approved) : ?>
-				<p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', 'textdomain'); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e('Your comment is awaiting moderation.', THEME_TEXTDOMAIN); ?></p>
 			<?php endif; ?>
 		</div>
 	<?php
