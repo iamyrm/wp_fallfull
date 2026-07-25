@@ -52,3 +52,14 @@ fallfull is distributed under the terms of the GNU GPL
 	resize: none;
 	width: 100%;
 }
+
+.search-field {
+	font-size: 15px;
+	color: rgb(5, 25, 34);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(221, 221, 221);
+	border-image: none;
+	padding: 15px;
+	border-radius: 5px;
+}

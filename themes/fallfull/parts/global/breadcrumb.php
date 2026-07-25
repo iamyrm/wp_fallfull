@@ -30,6 +30,10 @@ if (is_404()) { // 404 Page
 	if (has_post_thumbnail($blog_page_id)) {
 		$background_url = get_the_post_thumbnail_url($blog_page_id, 'full');
 	}
+} elseif (is_search()) {
+	$title = get_search_query();
+	$subtitle = get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
+	$display_subtitle = $subtitle ? $subtitle : 'What are you looking for?';
 }
 
 ?>
