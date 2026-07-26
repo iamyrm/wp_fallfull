@@ -85,3 +85,11 @@ fallfull is distributed under the terms of the GNU GPL
 	width: 100%;
 	resize: none;
 }
+
+.product-filters ul li a {
+	color: #323232;
+}
+
+.fallfull_white>a {
+	color: #fff !important;
+}

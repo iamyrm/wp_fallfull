@@ -34,6 +34,10 @@ if (is_404()) { // 404 Page
 	$title = get_search_query();
 	$subtitle = get_post_meta(get_the_ID(), 'wp_page_subtitle', true);
 	$display_subtitle = $subtitle ? $subtitle : 'What are you looking for?';
+} elseif (is_shop()) {
+	$background_url = THEME_URI . '/assets/images/default-slide.jpg';
+	$title = get_the_title(wc_get_page_id('shop')) ? get_the_title(wc_get_page_id('shop')) : 'Our Shop';
+	$display_subtitle = 'All Fresh and Organis';
 }
 
 ?>

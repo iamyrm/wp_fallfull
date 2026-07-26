@@ -15,6 +15,7 @@ require_once THEME_DIR . '/inc/site_func.php';
 require_once THEME_DIR . '/lib/tgm/class-tgm-plugin-activation.php';
 require_once THEME_DIR . '/inc/tgm-core.php';
 require_once THEME_DIR . '/inc/subscribe_func.php';
+require_once THEME_DIR . '/inc/woocommerce_func.php';
 
 add_action('after_setup_theme', 'fallfull_setup');
 function fallfull_setup()
