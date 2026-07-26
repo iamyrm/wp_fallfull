@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-lg-4 col-md-6 text-center">
 		<div class="single-product-item">
-			<div class="product-image">
+			<div class="fallfull-product-image">
 				<a href="single-product.html"><img src="<?php echo THEME_URI . '/assets/images/default-slide.jpg'; ?>" alt=""></a>
 			</div>
 			<h3>Strawberry</h3>
@@ -11,7 +11,7 @@
 	</div>
 	<div class="col-lg-4 col-md-6 text-center">
 		<div class="single-product-item">
-			<div class="product-image">
+			<div class="fallfull-product-image">
 				<a href="single-product.html"><img src="<?php echo THEME_URI . '/assets/images/default-slide.jpg'; ?>" alt=""></a>
 			</div>
 			<h3>Berry</h3>
@@ -21,7 +21,7 @@
 	</div>
 	<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
 		<div class="single-product-item">
-			<div class="product-image">
+			<div class="fallfull-product-image">
 				<a href="single-product.html"><img src="<?php echo THEME_URI . '/assets/images/default-slide.jpg'; ?>" alt=""></a>
 			</div>
 			<h3>Lemon</h3>

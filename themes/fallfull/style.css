@@ -86,10 +86,29 @@ fallfull is distributed under the terms of the GNU GPL
 	resize: none;
 }
 
+.fallfull-prod-title {
+	color: #051922;
+}
+
 .product-filters ul li a {
 	color: #323232;
 }
 
 .fallfull_white>a {
 	color: #fff !important;
+}
+
+.woocommerce ul.products li.product a img {
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
