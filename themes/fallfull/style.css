@@ -112,3 +112,22 @@ fallfull is distributed under the terms of the GNU GPL
 	padding-top: 0;
 	padding-bottom: 0;
 }
+
+.woocommerce ul.products li.product .button {
+	margin-top: 0;
+}
+
+.fallfull-cart-btn {
+	font-family: 'Poppins', sans-serif !important;
+	display: inline-block !important;
+	background-color: #F28123 !important;
+	color: #fff !important;
+	padding: 15px 20px !important;
+	border-radius: 50px !important;
+
+}
+
+.fallfull-cart-btn:hover {
+	background-color: #051922 !important;
+	color: #F28123 !important;
+}
