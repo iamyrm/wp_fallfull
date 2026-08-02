@@ -70,4 +70,57 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
 	// Removing reviews and rating
 	remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 10);
+
+	/*
+	 * PRODUCT DETAILS PAGE ===========================
+	 */
+
+	// Removing flash sale discount form product details page
+	remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+
+	// Removing sidebar and upsell display from product details page
+	remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+	remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
+
+	// 1. Remove the default WooCommerce product image gallery wrapper
+	remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
+
+	// 2. Create your custom function to dynamically fetch and display the product image
+	function fallfull_prod_detail_pg_custom_image()
+	{
+		global $product;
+
+		// Check if we are safely inside a valid product context
+		if (! is_a($product, 'WC_Product')) {
+			return;
+		}
+
+		// Get the dynamic URL of the product's featured image
+		$image_id  = $product->get_image_id();
+		$image_url = $image_id ? wp_get_attachment_image_url($image_id, 'large') : wc_placeholder_img_src('large');
+		$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+		// Output your custom Bootstrap HTML structure
+		echo '<div class="col-md-5">';
+		echo '<div class="single-product-img">';
+		echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt ? $image_alt : $product->get_name()) . '">';
+		echo '</div>';
+		echo '</div>';
+	}
+
+	// 3. Attach your custom layout function exactly where the old image was removed
+	add_action('woocommerce_before_single_product_summary', 'fallfull_prod_detail_pg_custom_image', 20);
+
+	// Custom title for product details page
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+
+	function fallfull_prod_detail_title()
+	{
+		echo '<h3>' . get_the_title() . '</h3>';
+	}
+	add_action('woocommerce_single_product_summary', 'fallfull_prod_detail_title', 5);
+
+
+	// Removing the rating from single detail page
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
 }
