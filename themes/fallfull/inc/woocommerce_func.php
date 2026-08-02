@@ -123,4 +123,36 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
 	// Removing the rating from single detail page
 	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+
+	// 1. Remove the default WooCommerce single product price template
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+
+	function fallfull_prod_details_price()
+	{
+		global $product;
+
+		if (! is_a($product, 'WC_Product')) {
+			return;
+		}
+
+		$raw_price = $product->get_price();
+		$formatted_price = (floatval($raw_price) == intval($raw_price)) ? intval($raw_price) : number_format($raw_price, 2);
+
+		if ($formatted_price) {
+			echo '<p class="single-product-pricing">';
+			echo '<span>Per Kg</span>';
+			echo 'Rs ' . esc_html($formatted_price);
+			echo '</p>';
+		}
+	}
+	add_action('woocommerce_single_product_summary', 'fallfull_prod_details_price', 10);
+
+	// Displaying custom layout for excerpt
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+
+	function fallfull_prod_details_excerpt()
+	{
+		echo '<p>' . wp_strip_all_tags(get_the_excerpt()) . '</p>';
+	}
+	add_action('woocommerce_single_product_summary', 'fallfull_prod_details_excerpt', 20);
 }
