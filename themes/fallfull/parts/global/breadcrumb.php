@@ -38,8 +38,11 @@ if (is_404()) { // 404 Page
 	$background_url = THEME_URI . '/assets/images/default-slide.jpg';
 	$title = get_the_title(wc_get_page_id('shop')) ? get_the_title(wc_get_page_id('shop')) : 'Our Shop';
 	$display_subtitle = 'All Fresh and Organis';
+} elseif (function_exists('is_product') && is_product()) {
+	$background_url = THEME_URI . '/assets/images/default-slide.jpg';
+	$title = 'Product Details';
+	$display_subtitle = 'All Fresh and Organics';
 }
-
 ?>
 
 <div class="breadcrumb-section" style=" background-image: url(<?php echo esc_url($background_url); ?>);">
