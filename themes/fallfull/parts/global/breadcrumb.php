@@ -42,6 +42,10 @@ if (is_404()) { // 404 Page
 	$background_url = THEME_URI . '/assets/images/default-slide.jpg';
 	$title = 'Product Details';
 	$display_subtitle = 'All Fresh and Organics';
+} elseif (is_cart()) {
+	$background_url = THEME_URI . '/assets/images/default-slide.jpg';
+	$title = 'Cart';
+	$display_subtitle = 'All Fresh and Organics';
 }
 ?>
 
