@@ -131,3 +131,34 @@ fallfull is distributed under the terms of the GNU GPL
 	background-color: #051922 !important;
 	color: #F28123 !important;
 }
+
+.button.cart-btn {
+	border-radius: 50px !important;
+}
+
+.button.cart-btn {
+	-webkit-transition: 0.3s !important;
+	-o-transition: 0.3s !important;
+	transition: 0.3s !important;
+}
+
+.button.cart-btn:hover {
+	background-color: #051922 !important;
+	color: #F28123 !important;
+}
+
+.button.cart-btn {
+	font-family: 'Poppins', sans-serif !important;
+	display: inline-block !important;
+	background-color: #F28123 !important;
+	color: #fff !important;
+}
+
+.button.cart-btn i {
+	margin-right: 5px !important;
+}
+
+.single-product-form .button.cart-btn {
+	padding: 10px 20px !important;
+	margin: 6px 0px 0px 10px !important;
+}
