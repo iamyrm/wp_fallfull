@@ -35,30 +35,38 @@ if ($related_products) :
 	}
 ?>
 
-	<section class="related products">
-		<?php
-		$heading = apply_filters('woocommerce_product_related_products_heading', __('Related products', 'woocommerce'));
-
-		if ($heading) :
-		?>
-			<h2><?php echo esc_html($heading); ?></h2>
-		<?php endif; ?>
-		<?php woocommerce_product_loop_start(); ?>
-
-		<?php foreach ($related_products as $related_product) : ?>
-
+	<section class="related products more-products mt-150">
+		<div class="container">
 			<?php
-			$post_object = get_post($related_product->get_id());
+			$heading = apply_filters('woocommerce_product_related_products_heading', __('Related products', 'woocommerce'));
 
-			setup_postdata($GLOBALS['post'] = $post_object); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
-
-			wc_get_template_part('content', 'product');
+			if ($heading) :
 			?>
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 text-center">
+						<div class="section-title">
+							<h3><span class="orange-text">Related</span> Products</h3>
+							<p>One of the finest product you can grab.</p>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+			<?php woocommerce_product_loop_start(); ?>
 
-		<?php endforeach; ?>
+			<?php foreach ($related_products as $related_product) : ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+				<?php
+				$post_object = get_post($related_product->get_id());
 
+				setup_postdata($GLOBALS['post'] = $post_object); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+
+				wc_get_template_part('content', 'product');
+				?>
+
+			<?php endforeach; ?>
+
+			<?php woocommerce_product_loop_end(); ?>
+		</div>
 	</section>
 <?php
 endif;

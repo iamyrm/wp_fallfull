@@ -182,3 +182,7 @@ fallfull is distributed under the terms of the GNU GPL
 	content: "\e015";
 	color: #F28123;
 }
+
+.fallfull-mb-0 {
+	margin-bottom: 0px !important;
+}

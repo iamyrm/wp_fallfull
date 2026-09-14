@@ -24,8 +24,9 @@ global $product;
 if (! is_a($product, WC_Product::class) || ! $product->is_visible()) {
 	return;
 }
+
 ?>
-<li <?php wc_product_class('text-center', $product); ?>>
+<li class="<?php echo esc_attr('text-center' . (is_product() ? ' fallfull-mb-0' : '')); ?> <?php echo esc_attr(implode(' ', wc_get_product_class('', $product))); ?>">
 	<div class="single-product-item">
 		<?php
 		/**
