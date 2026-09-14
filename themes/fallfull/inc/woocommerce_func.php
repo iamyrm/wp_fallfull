@@ -156,3 +156,12 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 	}
 	add_action('woocommerce_single_product_summary', 'fallfull_prod_details_excerpt', 20);
 }
+
+// Display 3 related products in product details page
+function fallfull_display_three_related_proucts($args)
+{
+	$args['posts_per_page'] = 3;
+	$args['columns']        = 3;
+	return $args;
+}
+add_filter('woocommerce_output_related_products_args', 'fallfull_display_three_related_proucts', 9999);
