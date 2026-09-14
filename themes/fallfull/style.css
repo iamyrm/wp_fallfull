@@ -127,27 +127,28 @@ fallfull is distributed under the terms of the GNU GPL
 
 }
 
-.fallfull-cart-btn:hover {
+.fallfull-cart-btn:hover,
+.button.cart-btn:hover,
+.woocommerce-message .button:hover {
 	background-color: #051922 !important;
 	color: #F28123 !important;
 }
 
-.button.cart-btn {
+.button.cart-btn,
+.woocommerce-message .button {
 	border-radius: 50px !important;
 }
 
-.button.cart-btn {
+.button.cart-btn,
+.woocommerce-message .button {
 	-webkit-transition: 0.3s !important;
 	-o-transition: 0.3s !important;
 	transition: 0.3s !important;
 }
 
-.button.cart-btn:hover {
-	background-color: #051922 !important;
-	color: #F28123 !important;
-}
 
-.button.cart-btn {
+.button.cart-btn,
+.woocommerce-message .button {
 	font-family: 'Poppins', sans-serif !important;
 	display: inline-block !important;
 	background-color: #F28123 !important;
@@ -161,4 +162,23 @@ fallfull is distributed under the terms of the GNU GPL
 .single-product-form .button.cart-btn {
 	padding: 10px 20px !important;
 	margin: 6px 0px 0px 10px !important;
+}
+
+.product_meta .posted_in a,
+.fallfull_comma {
+	color: #F28123;
+}
+
+.product_meta .posted_in a:hover,
+.posted_in {
+	color: #051922;
+}
+
+.woocommerce-message {
+	border-top-color: #F28123;
+}
+
+.woocommerce-message::before {
+	content: "\e015";
+	color: #F28123;
 }
